@@ -118,16 +118,13 @@ def game_hash
   }
 end
 
-#def find_player_name(player_name) 
-#  game_hash.each do |location, team_hash| 
-#    if team_hash[:players][player_name] 
-#      return team_hash[:players][player_name] 
-#    end
-#  end
-#end
-
-def find_player_name(player_name)
-  game_hash
+def find_player_name(player_name) 
+  game_hash.each do |location, team_hash| 
+    if team_hash[:players][player_name] 
+      return team_hash[:players][player_name] 
+    end
+  end
+end
 
 def num_points_scored(player_name)
   find_player_name(player_name)[:points] 
@@ -146,7 +143,13 @@ end
 #end
 
 def team_colors(team_name)
-  if 
+  if game_hash[:home][:team_name]
+    return game_hash[:home][:colors]
+  elsif game_hash[:away][:team_name]
+    return game_hash[:away][:colors]
+  else
+    "No Team"
+  end
 end
 
 
