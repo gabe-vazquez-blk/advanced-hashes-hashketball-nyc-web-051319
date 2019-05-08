@@ -142,15 +142,17 @@ end
 #  end
 #end
 
-def team_colors(team_name)
-  if game_hash[:home][:team_name]
-    return game_hash[:home][:colors]
-  elsif game_hash[:away][:team_name]
-    return game_hash[:away][:colors]
-  else
-    "No Team"
-  end
-end
+#def team_colors(team_name)
+#  if game_hash[:home][:team_name]
+#    return game_hash[:home][:colors]
+#  elsif game_hash[:away][:team_name]
+#    return game_hash[:away][:colors]
+#  else
+#    "No Team"
+#  end
+#end
+
+
 
 
 
