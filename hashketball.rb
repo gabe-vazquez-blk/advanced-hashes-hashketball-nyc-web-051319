@@ -118,13 +118,16 @@ def game_hash
   }
 end
 
-def find_player_name(player_name) 
-  game_hash.each do |location, team_hash| 
-    if team_hash[:players][player_name] 
-      return team_hash[:players][player_name] 
-    end
-  end
-end
+#def find_player_name(player_name) 
+#  game_hash.each do |location, team_hash| 
+#    if team_hash[:players][player_name] 
+#      return team_hash[:players][player_name] 
+#    end
+#  end
+#end
+
+def find_player_name(player_name)
+  game_hash
 
 def num_points_scored(player_name)
   find_player_name(player_name)[:points] 
@@ -135,8 +138,8 @@ def shoe_size(player_name)
 end
 
 #def find_team_name(team_name) 
-  #game_hash.each do |location| 
-    #if location[:team_name]
+#  game_hash.each do |location| 
+#    if location[:team_name]
 #      return location 
 #    end
 #  end
