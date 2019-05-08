@@ -154,8 +154,8 @@ end
 
 def team_names
   teams = []
-  teams.merge(game_hash[:away][:team_name])
-  teams.merge(game_hash[:home][:team_name])
+  teams.join(game_hash[:away][:team_name])
+  teams.join(game_hash[:home][:team_name])
   teams
 end
 
