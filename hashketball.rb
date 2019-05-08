@@ -147,7 +147,6 @@ def team_colors(team_name)
     return game_hash[:home][:colors]
   elsif game_hash[:away][:team_name]
     return game_hash[:away][:colors]
-    binding.pry
   else
     "No Team"
   end
