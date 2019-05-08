@@ -153,7 +153,9 @@ def team_colors(team_name)
 end
 
 def team_names
-  
+  teams = game_hash[:away][:team_name].merge(game_hash[:home][:team_name])
+  teams
+end
 
 
 
