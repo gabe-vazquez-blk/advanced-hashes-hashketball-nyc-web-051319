@@ -137,7 +137,7 @@ end
 def find_team_name(team_name) 
   game_hash.each do |location, team_hash| 
     if team_hash[:team_name]
-      return location 
+      return team_hash 
     end
   end
 end
