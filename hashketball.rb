@@ -135,9 +135,9 @@ def shoe_size(player_name)
 end
 
 def find_team_name(team_name) 
-  game_hash.each do |location, team_hash| 
-    if team_hash[:team_name]
-      return team_hash 
+  game_hash.each do |location| 
+    if location[:team_name]
+      return location 
     end
   end
 end
