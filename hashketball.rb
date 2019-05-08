@@ -142,27 +142,14 @@ end
 #  end
 #end
 
-#def team_colors(team_name)
-#  if game_hash[:home][:team_name]
-#    return game_hash[:home][:colors]
-#  elsif game_hash[:away][:team_name]
-#    return game_hash[:away][:colors]
-#  else
-#    "No Team"
-#  end
-#end
-
-def teams
-  game_hash.values
-end
-
-def find_the_team(team_name)
-  teams.find {|team| team.fetch(:team_name) == team_name}
-end
-
 def team_colors(team_name)
-  team = find_the_team(team_name)
-  team.fetch(:colors)
+  if game_hash[:home][:team_name]
+    return game_hash[:home][:colors]
+  elsif game_hash[:away][:team_name]
+    return game_hash[:away][:colors]
+  else
+    "No Team"
+  end
 end
 
 
