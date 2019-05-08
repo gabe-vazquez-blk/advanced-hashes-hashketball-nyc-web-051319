@@ -142,7 +142,9 @@ def find_team_name(team_name)
   end
 end
 
-
+def team_colors(team_name)
+  find_team_name(team_name)[:colors]
+end
 
 
 
